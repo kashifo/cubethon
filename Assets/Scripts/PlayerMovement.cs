@@ -15,13 +15,13 @@ public class PlayerMovement : MonoBehaviour {
 		// Add a forward force
 		rb.AddForce(0, 0, forwardForce * Time.deltaTime);
 
-		if (Input.GetKey("d"))	// If the player is pressing the "d" key
+		if (Input.GetKey("right"))	// If the player is pressing the "d" key
 		{
 			// Add a force to the right
 			rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
 		}
 
-		if (Input.GetKey("a"))  // If the player is pressing the "a" key
+		if (Input.GetKey("left"))  // If the player is pressing the "a" key
 		{
 			// Add a force to the left
 			rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);

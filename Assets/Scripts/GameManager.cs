@@ -29,4 +29,16 @@ public class GameManager : MonoBehaviour {
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 
+	void Update(){
+
+		if(Input.GetKey("escape")){
+			if(gameHasEnded){
+				Application.Quit();
+			} else {
+				gameHasEnded = true;
+			}
+		}
+
+	}
+
 }
